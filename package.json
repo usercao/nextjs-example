@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "NODE_ENV=production next build",
-    "build:dev": "NODE_ENV=development next build",
-    "build:pre": "NODE_ENV=test next build",
+    "dev": "turbo dev --parallel",
+    "build": "NODE_ENV=production turbo build",
+    "build:dev": "NODE_ENV=development turbo build",
+    "build:pre": "NODE_ENV=test turbo build",
     "i18n": "yarn i18n:extract && yarn i18n:compile",
     "i18n:extract": "lingui extract --clean",
     "i18n:compile": "lingui compile --strict",
@@ -15,7 +15,7 @@
     "eslint:fix": "yarn eslint -- --fix",
     "prettier": "prettier --write '@(src)/**/*.@(ts|tsx)'",
     "stylelint": "stylelint '@(src)/**/*.@(css|scss|less)'",
-    "start": "next start"
+    "start": "turbo start"
   },
   "husky": {
     "hooks": {
