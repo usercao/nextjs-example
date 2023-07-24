@@ -10,7 +10,7 @@
     "i18n": "yarn i18n:extract && yarn i18n:compile",
     "i18n:extract": "lingui extract --clean",
     "i18n:compile": "lingui compile --strict",
-    "lint": "yarn eslint && yarn prettier && yarn stylelint",
+    "lint": "turbo lint",
     "eslint": "eslint --cache '@(src)/**/*.@(js|jsx|ts|tsx)'",
     "eslint:fix": "yarn eslint -- --fix",
     "prettier": "prettier --write '@(src)/**/*.@(ts|tsx)'",
