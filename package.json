@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "turbo run dev",
     "build": "NODE_ENV=production next build",
     "build:dev": "NODE_ENV=development next build",
     "build:pre": "NODE_ENV=test next build",
@@ -41,6 +41,7 @@
     "next": "13.4.12",
     "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
+    "turbo": "^1.10.9",
     "typescript": "5.1.6"
   }
 }
