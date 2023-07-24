@@ -4,9 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "NODE_ENV=production next build",
+    "build:dev": "NODE_ENV=development next build",
+    "build:pre": "NODE_ENV=test next build",
+    "i18n": "yarn i18n:extract && yarn i18n:compile",
+    "i18n:extract": "lingui extract --clean",
+    "i18n:compile": "lingui compile --strict",
+    "lint": "yarn eslint && yarn prettier && yarn stylelint",
+    "eslint": "eslint --cache '@(src)/**/*.@(js|jsx|ts|tsx)'",
+    "eslint:fix": "yarn eslint -- --fix",
+    "prettier": "prettier --write '@(src)/**/*.@(ts|tsx)'",
+    "stylelint": "stylelint '@(src)/**/*.@(css|scss|less)'",
+    "start": "next start"
   },
   "husky": {
     "hooks": {
