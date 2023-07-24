@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "turbo dev",
-    "build": "NODE_ENV=production turbo build",
-    "build:dev": "NODE_ENV=development turbo build",
-    "build:pre": "NODE_ENV=test turbo build",
+    "dev": "next dev --turbo",
+    "build": "NODE_ENV=production next build",
+    "build:dev": "NODE_ENV=development next build",
+    "build:pre": "NODE_ENV=test next build",
     "i18n": "yarn i18n:extract && yarn i18n:compile",
     "i18n:extract": "lingui extract --clean",
     "i18n:compile": "lingui compile --strict",
-    "lint": "turbo lint",
+    "lint": "next lint",
     "eslint": "eslint --cache '@(src)/**/*.@(js|jsx|ts|tsx)'",
     "eslint:fix": "yarn eslint -- --fix",
     "prettier": "prettier --write '@(src)/**/*.@(ts|tsx)'",
     "stylelint": "stylelint '@(src)/**/*.@(css|scss|less)'",
-    "start": "turbo start"
+    "start": "next start"
   },
   "husky": {
     "hooks": {
@@ -41,7 +41,6 @@
     "next": "13.4.12",
     "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
-    "turbo": "1.10.4",
     "typescript": "5.1.6"
   },
   "workspaces": [
