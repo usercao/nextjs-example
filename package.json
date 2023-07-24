@@ -43,5 +43,12 @@
     "stylelint": "^15.10.2",
     "turbo": "1.10.4",
     "typescript": "5.1.6"
-  }
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "yarn@1.22.19"
 }
