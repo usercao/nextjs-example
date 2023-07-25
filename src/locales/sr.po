@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/Developers.tsx:20
+#: src/components/Developers.tsx:17
 msgid "{selected, plural, one {Developer} other {Developers}}"
 msgstr "{selected, plural, one {Програмер} other {Програмера}}"
 
@@ -38,10 +38,10 @@ msgstr "Српски"
 msgid "Spanish"
 msgstr "Шпански"
 
-#: src/pages/index.tsx:28
+#: src/pages/index.tsx:150
 msgid "Translation Demo"
 msgstr "Демо Превод"
 
-#: src/pages/index.tsx:35
+#: src/pages/index.tsx:157
 msgid "Welcome to <0>Next.js!</0>"
 msgstr "Добродошли у <0>Нект.јс!</0>"
