@@ -1,4 +1,4 @@
-import nextConfig from './next.config';
+import nextConfig from './next.config.js';
 import { LinguiConfig } from '@lingui/conf';
 
 const linguiConfig: LinguiConfig = {

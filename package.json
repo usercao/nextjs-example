@@ -23,6 +23,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@lingui/core": "^4.3.0",
     "@lingui/react": "^4.3.0",
