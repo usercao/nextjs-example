@@ -14,4 +14,5 @@ module.exports = {
       include: ['src/'],
     },
   ],
+  compileNamespace: 'ts',
 };
