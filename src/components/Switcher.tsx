@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { t, msg } from '@lingui/macro';
+import { msg } from '@lingui/macro';
 import { MessageDescriptor } from '@lingui/core';
 import { useLingui } from '@lingui/react';
 

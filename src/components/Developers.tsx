@@ -14,7 +14,7 @@ export default function Developers() {
           <option value={'2'}>2</option>
         </select>
         <p>
-          <Plural value={selected} one={'Developer'} other={`Developers`} />
+          <Plural value={selected} one={'Developer'} other={'Developers'} />
         </p>
       </div>
     </div>
