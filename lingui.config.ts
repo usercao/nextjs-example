@@ -1,10 +1,10 @@
-const nextConfig = require('./next.config');
+import nextConfig from './next.config';
+import { LinguiConfig } from '@lingui/conf';
 
-/** @type {import('@lingui/conf').LinguiConfig} */
-module.exports = {
-  locales: nextConfig.i18n.locales,
+const linguiConfig: LinguiConfig = {
+  locales: nextConfig.i18n!.locales,
   pseudoLocale: 'pseudo',
-  sourceLocale: nextConfig.i18n.defaultLocale,
+  sourceLocale: nextConfig.i18n?.defaultLocale,
   fallbackLocales: {
     default: 'en',
   },
@@ -16,3 +16,5 @@ module.exports = {
   ],
   compileNamespace: 'ts',
 };
+
+export default linguiConfig;
