@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { t, msg } from '@lingui/macro';
-import { MessageDescriptor } from '@lingui/core/src';
+import { MessageDescriptor } from '@lingui/core';
 import { useLingui } from '@lingui/react';
 
 type LOCALES = 'en' | 'sr' | 'es' | 'pseudo';
