@@ -1,6 +1,8 @@
 import nextConfig from './next.config.js';
 import type { LinguiConfig } from '@lingui/conf';
 
+const { locales, defaultLocale } = nextConfig.i18n!;
+
 const linguiConfig: LinguiConfig = {
   catalogs: [
     {
@@ -9,13 +11,12 @@ const linguiConfig: LinguiConfig = {
       exclude: ['**/node_modules/**'],
     },
   ],
-  locales: nextConfig.i18n!.locales,
-  pseudoLocale: 'pseudo',
-  sourceLocale: nextConfig.i18n?.defaultLocale,
-  fallbackLocales: {
-    default: 'en',
-  },
   compileNamespace: 'ts',
+  locales: locales,
+  fallbackLocales: {
+    default: defaultLocale,
+  },
+  sourceLocale: defaultLocale,
 };
 
 export default linguiConfig;
