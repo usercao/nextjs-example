@@ -12,6 +12,14 @@ const languages: { [key: string]: MessageDescriptor } = {
   es: msg`Spanish`,
 };
 
+// type LOCALES = 'en-US' | 'es-ES' | 'ru-RU';
+
+// const languages: { [key: string]: MessageDescriptor } = {
+//   'en-US': 'English',
+//   'es-ES': 'Español',
+//   'pt-PT': 'Português',
+// };
+
 export function Switcher() {
   const router = useRouter();
   const { i18n } = useLingui();
@@ -29,6 +37,8 @@ export function Switcher() {
     setLocale(locale);
     router.push(router.pathname, router.pathname, { locale });
   }
+
+  return null;
 
   return (
     <select value={locale} onChange={handleChange}>
