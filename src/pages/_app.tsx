@@ -9,7 +9,7 @@ import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { useLinguiInit } from '../utils';
+import { useLinguiInit } from '../locales/utils';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useLinguiInit(pageProps.translation);

@@ -2,10 +2,25 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    // These are all the locales you want to support in
-    // your application
-    locales: ['en', 'sr', 'es', 'pseudo'],
-    defaultLocale: 'en',
+    locales: [
+      'en-US',
+      'ko-KR',
+      'ja-JP',
+      'de-DE',
+      'es-ES',
+      'fr-FR',
+      'pt-PT',
+      'fil-PH',
+      'hi-IN',
+      'th-TH',
+      'vi-VN',
+      'id-ID',
+      'kk-KZ',
+      'ru-RU',
+      'uk-UA',
+      'zh-TW',
+    ],
+    defaultLocale: 'en-US',
   },
   experimental: {
     swcPlugins: [['@lingui/swc-plugin', {}]],
