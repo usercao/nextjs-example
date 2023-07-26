@@ -4,21 +4,21 @@ import { msg } from '@lingui/macro';
 import { MessageDescriptor } from '@lingui/core';
 import { useLingui } from '@lingui/react';
 
-type LOCALES = 'en' | 'sr' | 'es' | 'pseudo';
-
-const languages: { [key: string]: MessageDescriptor } = {
-  en: msg`English`,
-  sr: msg`Serbian`,
-  es: msg`Spanish`,
-};
-
-// type LOCALES = 'en-US' | 'es-ES' | 'ru-RU';
+// type LOCALES = 'en' | 'sr' | 'es' | 'pseudo';
 
 // const languages: { [key: string]: MessageDescriptor } = {
-//   'en-US': 'English',
-//   'es-ES': 'Español',
-//   'pt-PT': 'Português',
+//   en: msg`English`,
+//   sr: msg`Serbian`,
+//   es: msg`Spanish`,
 // };
+
+type LOCALES = 'en-US' | 'es-ES' | 'ru-RU';
+
+const languages: { [key: string]: string } = {
+  'en-US': 'English',
+  'es-ES': 'Español',
+  'ru-RU': 'Português',
+};
 
 export function Switcher() {
   const router = useRouter();
@@ -37,8 +37,6 @@ export function Switcher() {
     setLocale(locale);
     router.push(router.pathname, router.pathname, { locale });
   }
-
-  return null;
 
   return (
     <select value={locale} onChange={handleChange}>

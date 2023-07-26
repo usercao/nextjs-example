@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 export async function loadCatalog(locale: string) {
-  const catalog = await import(`@lingui/loader!./locales/${locale}/index.po`);
+  // const catalog = await import(`@lingui/loader!./locales/${locale}/index.po`);
+  const catalog = await import(`@lingui/loader!./${locale}/index.po`);
   return catalog.messages;
 }
 
