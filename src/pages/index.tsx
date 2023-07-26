@@ -120,7 +120,7 @@ import { AboutText } from '../components/AboutText';
 import Developers from '../components/Developers';
 import { Switcher } from '../components/Switcher';
 import styles from '../styles/Index.module.css';
-import { loadCatalog } from '../locales/utils';
+import { loadCatalog } from '../locales';
 import { useLingui } from '@lingui/react';
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
