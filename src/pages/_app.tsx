@@ -5,6 +5,8 @@
 //   return <Component {...pageProps} />;
 // }
 
+import '@/assets/styles/uno.css';
+
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import '../styles/globals.css';

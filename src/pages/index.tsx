@@ -162,6 +162,7 @@ const Index: NextPage = () => {
           <AboutText />
         </div>
         <Developers />
+        <div className="flex flex-row front">21212</div>
       </main>
     </div>
   );
