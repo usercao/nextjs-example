@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 /**
@@ -62,42 +63,47 @@ const Reset = styled.createGlobalStyle`
   }
 `;
 
-export const GlobalStyle = styled.createGlobalStyle`
-  /* fix 浏览器默认样式 */
-  a,
-  a:link,
-  a:visited,
-  a:hover,
-  a:active {
-    text-decoration: none;
-    color: inherit;
-    backface-visibility: hidden;
-  }
-  img {
-    display: block;
-    outline: none;
-  }
-  /* 全局样式 */
-  * {
-    box-sizing: border-box;
+const Common = styled.createGlobalStyle`
+  :root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Mobile */
+    /* touch-action: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent; */
   }
   /* 隐藏横向滚动条 */
   :root::-webkit-scrollbar {
     height: 0;
     background-color: transparent;
   }
-  ::selection {
-    background: rgba(254, 215, 2, 0.8);
-    color: #ffffff;
+  * {
+    box-sizing: border-box;
   }
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+  html {
+    background: #121213;
   }
-  /* flex */
+  img {
+    display: block;
+    outline: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  hr {
+    margin: 0;
+    border: none;
+  }
+  /* ::selection {
+    background: rgba(47, 50, 65, 0.5);
+    color: #316ed8;
+  } */
+`;
+
+const FlexStyle = styled.createGlobalStyle`
   .row-start {
     display: flex;
     flex-direction: row;
@@ -148,24 +154,12 @@ export const GlobalStyle = styled.createGlobalStyle`
   }
 `;
 
-// const GlobalStyles = () => (
-//   <>
-//     <Reset />
-//     <Common />
-//     <Markdown />
-//     <Highlight />
-//     <Demo />
-//     <Icon />
-//     <IconPickSearcher />
-//     <BrowserMockup />
-//     <Responsive />
-//     {/* <NProgress /> */}
-//     <PreviewImage />
-//     <InlineCard />
-//     <ColorStyle />
-//     <HeadingAnchor />
-//     <SearchBar />
-//   </>
-// );
+const GlobalStyles = () => (
+  <React.Fragment>
+    <Reset />
+    <Common />
+    {/* <FlexStyle /> */}
+  </React.Fragment>
+);
 
-// export default GlobalStyles;
+export default GlobalStyles;
