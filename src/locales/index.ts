@@ -1,9 +1,9 @@
-import { i18n, Messages } from '@lingui/core';
+import * as React from 'react';
+import { i18n } from '@lingui/core';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import type { Messages } from '@lingui/core';
 
 export async function loadCatalog(locale: string) {
-  // const catalog = await import(`@lingui/loader!./locales/${locale}/index.po`);
   const catalog = await import(`@lingui/loader!./${locale}/index.po`);
   return catalog.messages;
 }
@@ -24,7 +24,7 @@ export function useLinguiInit(messages: Messages) {
     i18n.loadAndActivate({ locale, messages });
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     const localeDidChange = locale !== i18n.locale;
     if (localeDidChange) {
       i18n.loadAndActivate({ locale, messages });
