@@ -6,10 +6,13 @@
 // }
 
 import '@/assets/styles/uno.css';
+import GlobalStyles from '@/assets/styles/_global';
+import { StyleSheetManager } from 'styled-components';
+
+import { Provider } from 'jotai';
 
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useLinguiInit } from '../locales';
 
@@ -18,9 +21,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <I18nProvider i18n={i18n}>
-        <Component {...pageProps} />
-      </I18nProvider>
+      <GlobalStyles />
+      <StyleSheetManager enableVendorPrefixes>
+        <Provider>
+          <I18nProvider i18n={i18n}>
+            <Component {...pageProps} />
+          </I18nProvider>
+        </Provider>
+      </StyleSheetManager>
     </>
   );
 }

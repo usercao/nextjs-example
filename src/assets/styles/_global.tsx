@@ -82,9 +82,9 @@ const Common = styled.createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  html {
+  /* html {
     background: #121213;
-  }
+  } */
   img {
     display: block;
     outline: none;
