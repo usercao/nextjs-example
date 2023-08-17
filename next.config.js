@@ -21,7 +21,7 @@ const nextConfig = {
       // 'kk-KZ',
       'ru-RU',
       // 'uk-UA',
-      // 'zh-TW',
+      // 'zh-Hant',
     ],
     defaultLocale: 'en-US',
   },

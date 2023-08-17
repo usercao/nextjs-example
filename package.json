@@ -27,30 +27,30 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@lingui/core": "^4.3.0",
-    "@lingui/react": "^4.3.0",
+    "@lingui/core": "^4.4.0",
+    "@lingui/react": "^4.4.0",
     "dayjs": "^1.11.9",
-    "jotai": "^2.2.3",
-    "next": "13.4.12",
+    "jotai": "^2.3.1",
+    "next": "13.4.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^6.0.5"
+    "styled-components": "^6.0.7"
   },
   "devDependencies": {
     "@applint/spec": "^1.2.3",
-    "@commitlint/cli": "^17.6.7",
-    "@lingui/cli": "^4.3.0",
-    "@lingui/loader": "^4.3.0",
-    "@lingui/macro": "^4.3.0",
-    "@lingui/swc-plugin": "^4.0.3",
-    "@types/node": "20.4.4",
-    "@types/react": "18.2.16",
+    "@commitlint/cli": "^17.7.1",
+    "@lingui/cli": "^4.4.0",
+    "@lingui/loader": "^4.4.0",
+    "@lingui/macro": "^4.4.0",
+    "@lingui/swc-plugin": "^4.0.4",
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "@unocss/postcss": "^0.54.0",
-    "eslint": "^8.45.0",
-    "prettier": "^3.0.0",
+    "@unocss/postcss": "^0.55.1",
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2",
     "stylelint": "^15.10.2",
     "typescript": "5.1.6",
-    "unocss": "^0.54.0"
+    "unocss": "^0.55.1"
   }
 }
