@@ -4,27 +4,26 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV=production next build",
-    "build:dev": "NODE_ENV=development next build",
-    "build:pre": "NODE_ENV=test next build",
-    "i18n": "yarn i18n:extract && yarn i18n:compile",
-    "i18n:extract": "lingui extract --clean",
-    "i18n:compile": "lingui compile --strict",
-    "lint": "next lint",
-    "eslint": "eslint --cache '@(src)/**/*.@(js|jsx|ts|tsx)'",
-    "eslint:fix": "yarn eslint -- --fix",
-    "prettier": "prettier --write '@(src)/**/*.@(ts|tsx)'",
-    "stylelint": "stylelint '@(src)/**/*.@(css|scss|less)'",
-    "start": "next start"
+    "build": "next build",
+    "build:dev": "NODE_ENV=test next build",
+    "start": "next start",
+    "start:dev": "NODE_ENV=test next start",
+    "i18n": "lingui extract --clean",
+    "postinstall": "simple-git-hooks"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "simple-git-hooks": {
+    "pre-commit": "yarn exec lint-staged --concurrent false"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "lint-staged": {
+    "src/**/*.js?(x)": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "src/**/*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --fix"
+    ],
+    "*.scss": "stylelint --syntax=scss"
   },
   "dependencies": {
     "@lingui/core": "^4.5.0",
@@ -32,8 +31,8 @@
     "dayjs": "^1.11.10",
     "jotai": "^2.4.3",
     "next": "13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18",
+    "react-dom": "^18",
     "styled-components": "^6.1.0"
   },
   "devDependencies": {
@@ -43,14 +42,17 @@
     "@lingui/loader": "^4.5.0",
     "@lingui/macro": "^4.5.0",
     "@lingui/swc-plugin": "^4.0.4",
-    "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@unocss/postcss": "^0.56.5",
     "eslint": "^8.51.0",
     "prettier": "^3.0.3",
     "stylelint": "^15.11.0",
-    "typescript": "5.1.6",
+    "typescript": "^5",
     "unocss": "^0.56.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
