@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
   },
+  transpilePackages: ['ahooks'],
   i18n: {
     locales: [
       'en-US',
@@ -21,12 +23,26 @@ const nextConfig = {
       // 'kk-KZ',
       'ru-RU',
       // 'uk-UA',
-      // 'zh-Hant',
+      // 'zh-TW',
     ],
     defaultLocale: 'en-US',
+    localeDetection: false,
   },
   experimental: {
-    swcPlugins: [['@lingui/swc-plugin', {}]],
+    swcPlugins: [
+      ['@lingui/swc-plugin', {}],
+      ['@swc-jotai/react-refresh', {}],
+    ],
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.mp4$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[hash][ext][query]',
+      },
+    });
+    return config;
   },
 };
 

@@ -11,7 +11,6 @@ const linguiConfig: LinguiConfig = {
       exclude: ['**/node_modules/**'],
     },
   ],
-  compileNamespace: 'ts',
   locales: locales,
   fallbackLocales: {
     default: defaultLocale,
