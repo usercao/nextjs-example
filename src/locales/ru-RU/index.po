@@ -17,10 +17,6 @@ msgstr ""
 msgid "{selected, plural, one {Developer} other {Developers}}"
 msgstr "{selected, plural, one {Програмер} other {Програмера}}"
 
-#: src/components/Switcher.tsx:10
-msgid "English"
-msgstr "Енглески"
-
 #. js-lingui-explicit-id
 #: src/components/AboutText.tsx:6
 msgid "next-explanation"
@@ -30,18 +26,10 @@ msgstr "Некст.јс је отворени изворни Реацт-ов р�
 msgid "Plural Test: How many developers?"
 msgstr "Тест за Множину: Колико програмера?"
 
-#: src/components/Switcher.tsx:11
-msgid "Serbian"
-msgstr "Српски"
-
-#: src/components/Switcher.tsx:12
-msgid "Spanish"
-msgstr "Шпански"
-
-#: src/pages/index.tsx:150
+#: src/pages/index.tsx:34
 msgid "Translation Demo"
 msgstr "Демо Превод"
 
-#: src/pages/index.tsx:157
+#: src/pages/index.tsx:41
 msgid "Welcome to <0>Next.js!</0>"
 msgstr "Добродошли у <0>Нект.јс!</0>"

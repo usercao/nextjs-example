@@ -17,10 +17,6 @@ msgstr ""
 msgid "{selected, plural, one {Developer} other {Developers}}"
 msgstr "{selected, plural, one {Programador} other {Programadores}}"
 
-#: src/components/Switcher.tsx:10
-msgid "English"
-msgstr "Inglés"
-
 #. js-lingui-explicit-id
 #: src/components/AboutText.tsx:6
 msgid "next-explanation"
@@ -30,18 +26,10 @@ msgstr "Next.js es un marco de trabajo web de desarrollo front-end de React de c
 msgid "Plural Test: How many developers?"
 msgstr "Prueba Plural: Cuantos programadores?"
 
-#: src/components/Switcher.tsx:11
-msgid "Serbian"
-msgstr "Serbio"
-
-#: src/components/Switcher.tsx:12
-msgid "Spanish"
-msgstr "Español"
-
-#: src/pages/index.tsx:150
+#: src/pages/index.tsx:34
 msgid "Translation Demo"
 msgstr "Demostración de Traducción"
 
-#: src/pages/index.tsx:157
+#: src/pages/index.tsx:41
 msgid "Welcome to <0>Next.js!</0>"
 msgstr "Bienvenido a <0>Next.js!</0>"

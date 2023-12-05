@@ -1,20 +1,25 @@
 import { t, Trans } from '@lingui/macro';
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { AboutText } from '../components/AboutText';
 import Developers from '../components/Developers';
 import { Switcher } from '../components/Switcher';
 import { loadCatalog } from '../locales';
 import { useLingui } from '@lingui/react';
+import type { NextPage, NextPageContext } from 'next';
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const translation = await loadCatalog(ctx.locale!);
-  return {
-    props: {
-      translation,
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps = async (ctx) => {
+//   const translation = await loadCatalog(ctx.locale!);
+//   return {
+//     props: {
+//       translation,
+//     },
+//   };
+// };
+
+interface Props {
+  translation: any;
+}
 
 const Index: NextPage = () => {
   /**
@@ -50,6 +55,12 @@ const Index: NextPage = () => {
       </main>
     </div>
   );
+};
+
+Index.getInitialProps = async (ctx: NextPageContext): Promise<Props> => {
+  const translation = await loadCatalog(ctx.locale!);
+
+  return { translation };
 };
 
 export default Index;

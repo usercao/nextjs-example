@@ -35,7 +35,10 @@ export function Switcher() {
     const locale = event.target.value as LOCALES;
 
     setLocale(locale);
-    router.push(router.pathname, router.pathname, { locale });
+    // router.push(router.pathname, router.pathname, { locale });
+
+    const { pathname, asPath } = router;
+    router.push(pathname, asPath, { locale: locale });
   }
 
   return (
