@@ -42,8 +42,22 @@ const nextConfig = {
         filename: 'static/media/[hash][ext][query]',
       },
     });
+    config.module.rules.push({
+      test: /\.po$/,
+      use: {
+        loader: '@lingui/loader',
+      },
+    });
     return config;
   },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/v1/:path*',
+  //       destination: 'https://test.com/api/v1/:path*',
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

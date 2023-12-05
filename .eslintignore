@@ -1,7 +1,6 @@
 # Directory
 dist/
 dist-ssr/
-locales/
 
 # Files
 **/*-min.js
