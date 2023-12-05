@@ -3,8 +3,15 @@ import { i18n } from '@lingui/core';
 import { useRouter } from 'next/router';
 import type { Messages } from '@lingui/core';
 
+/**
+ * Load messages for requested locale and activate it.
+ * This function isn't part of the LinguiJS library because there are
+ * many ways how to load messages — from REST API, from file, from cache, etc.
+ */
 export async function loadCatalog(locale: string) {
-  const catalog = await import(`@lingui/loader!./${locale}/index.po`);
+  // https://github.com/lingui/js-lingui/issues/1782
+  // const catalog = await import(`@lingui/loader!./${locale}/index.po`);
+  const catalog = await import(`./${locale}/index.po`);
   return catalog.messages;
 }
 
@@ -29,7 +36,7 @@ export function useLinguiInit(messages: Messages) {
     if (localeDidChange) {
       i18n.loadAndActivate({ locale, messages });
     }
-  }, [locale]);
+  }, [locale, messages]);
 
   return i18n;
 }
